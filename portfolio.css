@@ -153,9 +153,40 @@ body {
     }
 
     .skills-container img {
-    height: 60px; /* Keeps them vertically uniform */
-    width: auto;  /* Maintains aspect ratio */
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    height: 60px;
+    width: auto;
+    filter: grayscale(85%) opacity(35%); /* Low-power hardware look */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: atmosphericFloat 4s ease-in-out infinite;
+
+        .skills-container img:nth-child(even) {
+    animation-duration: 5s;
+    animation-delay: 0.4s;
+    }
+        .skills-container img:hover {
+    animation: none; /* Halts floating cleanly so transform can override */
+    transform: translateY(-12px) scale(1.18);
+}
+
+/* 4. Targeted High-Power Brand Glows */
+.skills-container img:nth-child(1):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #e34c26); } /* HTML5 */
+.skills-container img:nth-child(2):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #264de4); } /* CSS3 */
+.skills-container img:nth-child(3):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #ffde57); } /* Python */
+.skills-container img:nth-child(4):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #00599c); } /* C++ */
+.skills-container img:nth-child(5):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #227ec4); } /* KiCad */
+.skills-container img:nth-child(6):hover { filter: grayscale(0%) opacity(100%) drop-shadow(0 0 15px #7d2ae8); } /* Canva */
+
+/* 5. The Fine-Tuned Float Keyframes */
+@keyframes atmosphericFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px); /* Subtle drift up */
+    }
+    100% {
+        transform: translateY(0px);
+    }
     }
         html {
             scroll-behavior: smooth;
