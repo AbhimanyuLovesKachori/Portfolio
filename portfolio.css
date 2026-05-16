@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@500;700&display=swap');
 body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    background: linear-gradient(-45deg, #060b19, #110726, #09142e, #05030a);
+    /* 1. Lifted the color values to richer, slightly brighter cyber-tech shades */
+    background: linear-gradient(-45deg, #1b223c, #2d224e, #1f305e, #25183a);
     
-    /* 2. Stretch the background size so there is "room" to move it around */
+    /* 2. Keeps the zoom level for the movement */
     background-size: 400% 400%;
     
-    /* 3. Run the animation infinitely (15 seconds loop, smooth ease transition) */
+    /* 3. Keeps the smooth 15-second infinite loop */
     animation: shiftingGradient 15s ease infinite;
     
-    /* Keeps everything fixed in place while scrolling */
+    /* Keeps the layout locked in place while scrolling */
     background-attachment: fixed; 
-    background-color: #060b19;
+    background-color: #1b223c;
+    
+    /* Ensures your new clean font remains applied */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 /* 4. Define the movement behavior */
