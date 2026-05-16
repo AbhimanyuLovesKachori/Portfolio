@@ -1,10 +1,10 @@
  body {
-            background-image: url("https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?semt=ais_rp_progressive&w=740&q=80");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            background-color: #cccccc;
-        }
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?semt=ais_rp_progressive&w=740&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+       }
 
         image {
             width: 50px;
@@ -65,6 +65,7 @@
             display: -webkit-flex;
             display: flex;
             margin-bottom: 100px;
+            align-items: flex-start;
         }
 
         nav {
