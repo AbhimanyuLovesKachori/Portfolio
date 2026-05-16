@@ -169,3 +169,25 @@ h1, h2, h3 {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
 }
+
+html, body, a, button {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+    z-index: 9999;
+    box-shadow: 0 0 15px #00ffcc, inset 0 0 5px #00ffcc;
+    transition: transform 0.08s ease-out, background-color 0.2s ease;
+}
+
+.custom-cursor.hovered {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(0, 255, 204, 0.2);
+}
