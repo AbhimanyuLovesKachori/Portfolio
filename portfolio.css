@@ -85,8 +85,6 @@ body {
 
         .container {
             display: flex;
-            /* justify-content: flex-start; */
-            /* align-items: flex-start;  */
             gap: 40px;
             padding: 30px;
         }
