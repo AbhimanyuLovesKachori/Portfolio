@@ -2,10 +2,30 @@
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    background-image: url("https://img.freepik.com/free-vector/dark-gradient-background-with-copy-space_53876-99548.jpg?semt=ais_rp_progressive&w=740&q=80");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(-45deg, #060b19, #110726, #09142e, #05030a);
+    
+    /* 2. Stretch the background size so there is "room" to move it around */
+    background-size: 400% 400%;
+    
+    /* 3. Run the animation infinitely (15 seconds loop, smooth ease transition) */
+    animation: shiftingGradient 15s ease infinite;
+    
+    /* Keeps everything fixed in place while scrolling */
+    background-attachment: fixed; 
+    background-color: #060b19;
+}
+
+/* 4. Define the movement behavior */
+@keyframes shiftingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
        }
 
         image {
